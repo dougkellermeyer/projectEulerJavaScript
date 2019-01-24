@@ -6,14 +6,13 @@
 
 //define a prime number
 var notPrimeNumbers = [];
-var primeNumbers2 = [2,3,5,7, 11];
+var primeFactors2 = [];
 
-function generatePrimeNumbers(){
-    for (i = 2; i < 1000; i++){
-        if(i % 2 === 0 || i % 3 === 0 || i % 5 === 0 || i % 7 === 0 || i  % 11 === 0) {
-            notPrimeNumbers.push(i);
+function generatePrimeNumbers(n, divisor){
+    for (n = 1; n < 1000; n++){
+        if(n % divisor === 0) {
+            
         } else {
-            primeNumbers2.push(i);
         }
     }
 };
