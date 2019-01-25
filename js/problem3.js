@@ -5,44 +5,44 @@
 // What is the largest prime factor of the number 600851475143 ?
 
 //define a prime number
-var notPrimeNumbers = [];
-var primeFactors2 = [];
+const primeNumbers = [];
 
-function generatePrimeNumbers(n, divisor){
-    for (n = 1; n < 1000; n++){
+const generatePrimeNumbers = (n, divisor) =>{
+    divisor = 2;
+    n = 2;
+    while (n < 100){
         if(n % divisor === 0) {
-            
+            primeNumbers.push(divisor)
+            n++
         } else {
+            divisor++
         }
     }
 };
 
 generatePrimeNumbers();
 
-var primeNumbers = [
-    2,3,5,7,11,13,17,19, 23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97, 101,103,107,109,113,127,131,137,
-    139,149,151,157,163,167,173,179,181,191,193,197,199,211,223,227,229,233,239,241,251,257,263,269,271,277, 281,
-    283,293,307,311,313
-]
+// const primeNumbers = [
+//     2,3,5,7,11,13,17,19, 23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97, 101,103,107,109,113,127,131,137,
+//     139,149,151,157,163,167,173,179,181,191,193,197,199,211,223,227,229,233,239,241,251,257,263,269,271,277, 281,
+//     283,293,307,311,313
+// ]
 
-var primeFactors = [];
+const primeFactors = [];
 
-primeNumbers.forEach(function(primeNum){
+primeNumbers.forEach(function(primeFac){
     n = 13195; 
-    if (n % primeNum == 0) {
-        primeFactors.push(primeNum);
+    if (n % primeFac == 0) {
+        primeFactors.push(primeFac);
     }
 });
 
-var maxPrimeFactor = primeFactors.reduce(function(a,b){
-    return Math.max(a,b);
-});
+const maxPrimeFactor = (accumulator, currentValue) => {
+    return Math.max(accumulator, currentValue);
+}
 
-console.log("------------Method 1------------");   
-console.log(primeFactors);
-console.log(maxPrimeFactor);
-console.log("------------Mehod 2-------------");
-console.log(primeNumbers2);
+console.log('Prime numbers = ' + primeNumbers);
+console.log('Max prime factor = ' + primeFactors.reduce(maxPrimeFactor, 2));
 
 
 
