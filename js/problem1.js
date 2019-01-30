@@ -6,13 +6,13 @@
 //Find the sum of all the multiples of 3 or 5 below 1000.
 
 
-function isDivisible(num, divisor){
+const isDivisible = (num, divisor) => {
     return num % divisor == 0;
 };
 
-function findSumByDivisor (){
-    var sum = 0;
-    for (var i = 0; i < 1000; i++){
+const findSumByDivisor = () => {
+    let sum = 0;
+    for (let i = 0; i < 1000; i++){
         if(isDivisible(i, 3) || isDivisible(i, 5)){
             sum += i;
         }
