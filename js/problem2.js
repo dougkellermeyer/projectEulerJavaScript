@@ -10,17 +10,17 @@
 //exceed four million, find the sum of the even-valued terms.
 
 
-function makeFibTerms(number){
+const makeFibTerms = (number) => {
     if(number <= 1){
         return 1; 
     }
     return makeFibTerms(number-1) + makeFibTerms(number-2);
 }
 
-var sum = 0;
+let sum = 0;
 
-for (var i = 1; i < 1000000; i++ ){
-    var fibTerms = makeFibTerms(i);
+for (let i = 1; i < 1000000; i++ ){
+    let fibTerms = makeFibTerms(i);
     if (fibTerms > 4000000) {
         console.log(sum); 
         return sum;
