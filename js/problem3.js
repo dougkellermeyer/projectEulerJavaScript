@@ -19,7 +19,6 @@ const isPrime = n => {
             return false
         }
     }
-
     return n && n !== 1;
 };
 
