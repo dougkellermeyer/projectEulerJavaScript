@@ -29,7 +29,7 @@ const generatePrimeNumbers = ()=> {
             primeNumbers.push(i);
         }
     }
-}
+};
     
 generatePrimeNumbers();
 
@@ -42,12 +42,12 @@ primeNumbers.forEach(function(primeFac){
     }
 });
 
-const maxPrimeFactor = (accumulator, currentValue) => {
+const findMaxPrimeFactor = (accumulator, currentValue) => {
     return Math.max(accumulator, currentValue);
 }
 
-console.log('Prime factors = ' + primeFactors);
-console.log('Max prime factor = ' + primeFactors.reduce(maxPrimeFactor));
+console.log('The prime factors of ' + n + ' are '  + primeFactors);
+console.log('Max prime factor = ' + primeFactors.reduce(findMaxPrimeFactor));
 
 
 
