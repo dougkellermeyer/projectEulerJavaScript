@@ -14,4 +14,4 @@ console.log(array1.reduce(reducer, 5));
 const array2 = [0, 1, 2, 3];
 const reducer2 = (accum, currVal) => accum + currVal;
 
-console.log(array2.reduce(reducer2, 5)); //11
+console.log(array2.reduce(reducer2, 5)); //11 (5+0+1+2+3)
