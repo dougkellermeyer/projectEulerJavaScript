@@ -26,10 +26,10 @@ console.log('array2 = ' + threeDigitList2);
 
 const multiplyArrays = () => {
     const productsArray = [];
-    //want to grab the first item in the array and multiply that by every
+    //grab the first item in the array and multiply that by every
     //member of the other array
     for (let i = 0; i < threeDigitList1.length; i++){
-        productsArray.push(i);
+        threeDigitList1.map(threeDigitiLst1[0]*
     }
     return productsArray;
 };
