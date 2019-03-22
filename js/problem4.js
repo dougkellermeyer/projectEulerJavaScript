@@ -44,3 +44,13 @@ const multiplyArrays = () => {
 };
 
 console.log(multiplyArrays());
+
+//now we need to check for palindromes
+
+//https://stackoverflow.com/questions/18842861/largest-palindrome-product-in-javascript
+
+const isPalindrome = () => {
+    multiplyArrays.split(',')
+}
+
+console.log(isPalindrome());
