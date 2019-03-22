@@ -1,2 +1,2 @@
 # projectEulerJavaScript
-My solutions to the first 50 Euler problems in JavaScript
+My solutions to some of the Euler problems in JavaScript
