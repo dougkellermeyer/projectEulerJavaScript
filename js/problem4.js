@@ -28,10 +28,19 @@ const multiplyArrays = () => {
     const productsArray = [];
     //grab the first item in the array and multiply that by every
     //member of the other array
+    //move on to the next array
     for (let i = 0; i < threeDigitList1.length; i++){
-        threeDigitList1.map(threeDigitiLst1[0]*
-    }
-    return productsArray;
+            productsArray.push(threeDigitList1[0]*threeDigitList2[i]);
+            productsArray.push(threeDigitList1[1]*threeDigitList2[i]);
+            productsArray.push(threeDigitList1[2]*threeDigitList2[i]);
+            productsArray.push(threeDigitList1[3]*threeDigitList2[i]);
+            productsArray.push(threeDigitList1[4]*threeDigitList2[i]);
+            productsArray.push(threeDigitList1[5]*threeDigitList2[i]);
+            productsArray.push(threeDigitList1[6]*threeDigitList2[i]);
+            productsArray.push(threeDigitList1[7]*threeDigitList2[i]);
+            productsArray.push(threeDigitList1[8]*threeDigitList2[i]);
+    };
+    return productsArray.sort((a,b) => a - b);
 };
 
 console.log(multiplyArrays());
