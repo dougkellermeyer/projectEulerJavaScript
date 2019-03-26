@@ -5,23 +5,23 @@
 
 //general formula => 3 digit (x) * 3 digit (y) = palindrome
 
-const threeDigitList1 = []; 
-const threeDigitList2 = [];
+const array1 = []; 
+const array2 = [];
 
 //generate 3 digit numbers for product 1 & product 2
 const makeProducts = () => {
-    for (let i = 1; i < 10; i++){
-        threeDigitList1.push(i);
-        threeDigitList2.push(i);
+    for (let i = 1; i < 6; i++){
+        array1.push(i);
+        array2.push(i);
     }
 };
 
 makeProducts();
 
-console.log('array1 = ' + threeDigitList1);
-console.log('array2 = ' + threeDigitList2);
+console.log('array 1 = ' + array1);
+console.log('array 2 = ' + array2);
 
-//multiply threeDigitList1 & threeDigitList2 to form products array
+//multiply array1 & array2 to form products array
 
 
 const multiplyArrays = () => {
@@ -29,28 +29,25 @@ const multiplyArrays = () => {
     //grab the first item in the array and multiply that by every
     //member of the other array
     //move on to the next array
-    for (let i = 0; i < threeDigitList1.length; i++){
-            productsArray.push(threeDigitList1[0]*threeDigitList2[i]);
-            productsArray.push(threeDigitList1[1]*threeDigitList2[i]);
-            productsArray.push(threeDigitList1[2]*threeDigitList2[i]);
-            productsArray.push(threeDigitList1[3]*threeDigitList2[i]);
-            productsArray.push(threeDigitList1[4]*threeDigitList2[i]);
-            productsArray.push(threeDigitList1[5]*threeDigitList2[i]);
-            productsArray.push(threeDigitList1[6]*threeDigitList2[i]);
-            productsArray.push(threeDigitList1[7]*threeDigitList2[i]);
-            productsArray.push(threeDigitList1[8]*threeDigitList2[i]);
+    for (let i = 0; i < array1.length; i++){
+        for (let j = 0; j < array2.length; j++) {
+            productsArray.push(array1[i]*array2[j]);
+        }
     };
-    return productsArray.sort((a,b) => a - b);
+    return productsArray;
 };
 
-console.log(multiplyArrays());
+const multiplyArraysOrdered = multiplyArrays().sort((a,b) => a - b);
+
+console.log(multiplyArraysOrdered);
+
 
 //now we need to check for palindromes
 
 //https://stackoverflow.com/questions/18842861/largest-palindrome-product-in-javascript
 
 const isPalindrome = () => {
-    multiplyArrays.split(',')
+    console.log("yep!")
 }
 
-console.log(isPalindrome());
+isPalindrome();
