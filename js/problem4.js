@@ -23,7 +23,7 @@ for (x = 100; x <= 999; x++) {
     for (y = x; y <= 999; y++) {
         product = x * y;
         if (isPalidrome(product)) {
-          if( max < product ) { // this is new
+          if( max < product ) {
             max = product;
             console.log("The largest palidrome is " + product);
           }
