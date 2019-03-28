@@ -14,7 +14,7 @@ const isPalidrome = (x) => {
         return false;
 }
 
-//leveraged
+//used
 //https://stackoverflow.com/questions/18842861/largest-palindrome-product-in-javascript
 
 var x, y, product, max = 0;
